@@ -23,8 +23,10 @@ export class HomePage implements OnInit{
       maxZoom: 18
     }).addTo(map);
 
-    //web location test
+    //web location
     map.locate({ setView: true});
+
+    //when we have a location draw a marker and accuracy circle
     function onLocationFound(e) {
       var radius = e.accuracy / 2;
 
@@ -34,6 +36,7 @@ export class HomePage implements OnInit{
       Leaflet.circle(e.latlng, radius).addTo(map);
     }
     map.on('locationfound', onLocationFound);
+    //alert on location error
     function onLocationError(e) {
       alert(e.message);
     }
