@@ -21748,3 +21748,17 @@ sub {
     padding-top: calc(16px + 20px);
   }
 }
+
+page-home [noScroll] {
+  overflow: hidden;
+}
+
+page-home #map {
+  height: 100%;
+  width: 100%;
+}
+
+page-home #mapcontainter {
+  height: 100%;
+  width: 100%;
+}
