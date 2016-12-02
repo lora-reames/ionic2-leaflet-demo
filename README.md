@@ -1,1 +1,0 @@
-# ionic2-leaflet-demo
