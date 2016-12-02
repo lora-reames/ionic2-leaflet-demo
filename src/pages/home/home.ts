@@ -24,7 +24,20 @@ export class HomePage implements OnInit{
     }).addTo(map);
 
     //web location test
-    map.locate({ setView: true, maxZoom: 8 });
+    map.locate({ setView: true});
+    function onLocationFound(e) {
+      var radius = e.accuracy / 2;
 
+      Leaflet.marker(e.latlng).addTo(map)
+          .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+      Leaflet.circle(e.latlng, radius).addTo(map);
+    }
+    map.on('locationfound', onLocationFound);
+    function onLocationError(e) {
+      alert(e.message);
+    }
+
+    map.on('locationerror', onLocationError);
   }
 }
