@@ -24,3 +24,6 @@ you can load the app in your browser for testing just run ```ionic serve``` in t
 
 ### faking location for testing or privacy reasons
 In chrome you can use CTRL+SHIFT+i to open the inspector/console, go to 'more tools' and open the 'sensors' panel which will provide you with the option to select from a list of locations or specify a custom one.
+![](https://github.com/patrickr/ionic2-leaflet-demo/raw/master/screenshots/open_sensors.png)
+![](https://github.com/patrickr/ionic2-leaflet-demo/raw/master/screenshots/select_location.png)
+
